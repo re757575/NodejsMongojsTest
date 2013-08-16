@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  #querydiv
+    select(id="type")
+      option(value="all",selected) all
+      option(value="name") name
+      option(value="sex") sex
+    input(id="q",type="text",placeholder="")  
+  br
+  a(href="javascript:void(0)",class="read") read 
+  br
+  br
+  a(href="javascript:void(0)",class="create") create
+  br
+  br
+  a(href="javascript:void(0)",class="update") update
+  br
+  br 
+  a(href="javascript:void(0)",class="delete") delete
+
+  #loadpage
+  br
+  br
+  p post 
+  form(action="/",method="post")
+    span age:
+    input(type="text",name="age",value="18")
+    br
+    span name:
+    input(type="text",name="name",value="ff")
+    br
+    input(type="submit")
+

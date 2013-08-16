@@ -1,0 +1,15 @@
+
+/*
+ * GET users listing.
+ */
+require( './mydb' );
+
+exports.index = function(req, res){
+ db.users.save({name: "Michael", gender: "Male"}, function(err, saved) {
+             if( err || !saved ) console.log("User not saved");
+                 else {
+                          res.send("User saved");
+             }
+                  res.end();
+            });
+};
