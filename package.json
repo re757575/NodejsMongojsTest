@@ -2,10 +2,9 @@
   "name": "game",
   "version": "0.0.1",
   "dependencies": {
-    "express": "3.3.1",
+    "express": "3.3.4",
     "jade": "*",
-    "mongodb": "*",
-	"mongojs": "0.7.10"
+    "mongojs": "0.7.10"
 
   },
   "engines": {

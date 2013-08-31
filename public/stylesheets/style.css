@@ -1,4 +1,5 @@
 body {
+  background-color: rgba(226, 223, 223, 0.7);
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
@@ -18,3 +19,5 @@ a {
 margin-top: 5px;
  padding: 10px;
 }
+
+

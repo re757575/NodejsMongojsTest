@@ -25,13 +25,57 @@ block content
   #loadpage
   br
   br
-  p post 
-  form(action="/",method="post")
-    span age:
-    input(type="text",name="age",value="18")
-    br
-    span name:
-    input(type="text",name="name",value="ff")
-    br
-    input(type="submit")
+  h3 post 
+ 
+      form(action="/",method="post",)
+        label age:
+        input(type="text",name="age",value="18")
+        br
+        label name:
+        input(type="text",name="name",value="ff")
+        br
+        input(type="submit")
 
+     div(class="span7",style="margin-top:20px;",ng-controller="TableFilterCtrl")    
+      div
+        lable Search:
+        br      
+        input(type="text",ng-model="search.$")
+        br  
+        lable Name
+        br      
+        input(type="text",ng-model="search.name")
+        br  
+        lable Sex
+        br          
+        input(type="text",ng-model="search.sex")
+        br
+        label Equality:
+        input(type="checkbox",ng-model="strict")
+        br
+        br
+        input(type="button",class="btn",ng-click="read()",value="read")
+        span 
+          input(type="button",class="btn",ng-click="create()",value="create")		
+        span 
+          input(type="button",class="btn",ng-click="del()",value="del")
+        br
+        br
+
+      table(class="table table-striped table-bordered")
+        thead
+          tr
+            td 編號
+            td 姓名
+            td 性別
+            td ID
+        tbody
+          tr(ng-repeat="friend in friends | filter:search:strict")
+            td {{ $index + 1 }}
+            td {{ friend.name }}
+            td {{ friend.sex }}
+            td {{ friend._id }}
+            
+            
+ 
+  

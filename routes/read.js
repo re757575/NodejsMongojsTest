@@ -62,6 +62,8 @@ exports.index = function(req, res){
           console.log(users);
     
       }      
+      res.charset = 'utf-8';
+      res.contentType('text/javascript');	  
       res.send(users); 
       res.end();
   });
